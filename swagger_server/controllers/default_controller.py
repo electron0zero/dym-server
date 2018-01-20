@@ -4,6 +4,7 @@ from datetime import date, datetime
 from typing import List, Dict
 from six import iteritems
 from ..util import deserialize_date, deserialize_datetime
+from .core import segment_and_correct
 
 
 def dym_get(payload, spell, segment):
@@ -19,7 +20,7 @@ def dym_get(payload, spell, segment):
 
     :rtype: InlineResponse200
     """
-    return 'do some magic!'
+    return segment_and_correct(payload, spelling=spell, segmenting=segment)
 
 
 def dym_post(payload, spell, segment):
@@ -35,4 +36,4 @@ def dym_post(payload, spell, segment):
 
     :rtype: InlineResponse200
     """
-    return 'do some magic!'
+    return segment_and_correct(payload, spelling=spell, segmenting=segment)

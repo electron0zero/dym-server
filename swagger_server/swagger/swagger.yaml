@@ -4,9 +4,10 @@ info:
   description: "Your very own did you mean feature in Google Search"
   version: "0.0.1"
   title: "Did You Mean API"
-host: "api.example.com"
+host: "localhost:8080"
 basePath: "/v1"
 schemes:
+- "http"
 - "https"
 paths:
   /dym:
