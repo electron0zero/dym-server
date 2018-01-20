@@ -6,6 +6,8 @@ WORKDIR /usr/src/app
 COPY requirements.txt /usr/src/app/
 
 RUN pip3 install --no-cache-dir -r requirements.txt
+# download punkt corpora from nltk, used for tokenization
+RUN python3 -m nltk.downloader punkt
 
 COPY . /usr/src/app
 
